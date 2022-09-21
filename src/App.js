@@ -16,8 +16,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 function App() {
 
-  const [largo, setLargo] = useState(0);
 
+  const [largo, setLargo] = useState(0);
   const [open, setOpen] = React.useState(false);
   const [formInput, setFormInput] = useState();
   
