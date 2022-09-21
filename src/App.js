@@ -3,7 +3,7 @@ import React,{ useEffect , useState } from 'react';
 
 import CardContent from '@mui/material/CardContent';
 import { Container } from '@mui/system';
-import { getMensajes , saveMensaje } from './service/mensajesService';
+import { saveMensaje } from './service/mensajesService';
 import FeedMensajesComponent from './components/FeedMensajesComponent';
 import PopMensajeComponent from './components/PopMensajeComponent';
 import Button from '@mui/material/Button';
@@ -16,9 +16,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 function App() {
 
-  const [mensajesData, setMensajesData] = useState([]);
-  const [largo, setLargo] = useState(0);
 
+  const [largo, setLargo] = useState(0);
   const [open, setOpen] = React.useState(false);
   const [formInput, setFormInput] = useState();
   
@@ -43,25 +42,13 @@ function App() {
 
   };
 
-
-  useEffect(() => {
-    getMensajes().then(data => setMensajesData(data))
-  }, [largo])
-
-
-
   return (
 
     <Container sx={{ width: 600, height: 500, scroll: 'paper' } }>
       
       <CardContent>
         <div className="App">
-          {
-            mensajesData.map(item => {
-              return(
-                <FeedMensajesComponent mensaje={item}></FeedMensajesComponent>
-              )})
-          }
+        <FeedMensajesComponent largo={largo} ></FeedMensajesComponent>
         </div>
       </CardContent>
 
