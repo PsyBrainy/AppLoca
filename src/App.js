@@ -1,6 +1,5 @@
 
 import React,{ useEffect , useState } from 'react';
-
 import CardContent from '@mui/material/CardContent';
 import { Container } from '@mui/system';
 import { saveMensaje } from './service/mensajesService';
@@ -13,6 +12,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import './style.css';
 
 function App() {
 
