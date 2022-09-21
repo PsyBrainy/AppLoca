@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{ useEffect , useState } from 'react';
+
+import CardContent from '@mui/material/CardContent';
+import { Container } from '@mui/system';
+import { getMensajes } from './service/mensajesService';
+import FeedMensajesComponent from './components/FeedMensajesComponent';
+import PopMensajeComponent from './components/PopMensajeComponent';
 
 function App() {
+
+  const [mensajesData, setMensajesData] = useState([]);
+
+
+  useEffect(() => {
+    getMensajes().then(data => setMensajesData(data))
+  }, [mensajesData])
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Container sx={{ width: 600, height: 500, scroll: 'paper' } }>
+      
+      <CardContent>
+        <div className="App">
+          {
+            mensajesData.map(item => {
+              return(
+                <FeedMensajesComponent mensaje={item}></FeedMensajesComponent>
+              )})
+          }
+        </div>
+      </CardContent>
+
+      <PopMensajeComponent>
+      </PopMensajeComponent>
+
+    </Container>
   );
 }
 
