@@ -1,14 +1,25 @@
 import './styles/style.css';
 import React from 'react';
+import { BrowserRouter, Routes ,Route } from 'react-router-dom'
 
 import CuadroChatComponent from "./components/CuadroChatComponent.jsx"
 
 function App() {
 
   return(
-    <>
-      <CuadroChatComponent></CuadroChatComponent>
-    </>
+    
+    <BrowserRouter>
+   
+    <Routes>
+    <Route  path="/" element={<CuadroChatComponent/>}/>
+    </Routes>
+
+
+
+
+    </BrowserRouter>
+   
+
   )
 }
 
