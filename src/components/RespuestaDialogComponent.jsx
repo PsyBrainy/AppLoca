@@ -8,6 +8,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
+
 function RespuestaDialog(props) {
   return (
     <>
@@ -38,3 +39,4 @@ function RespuestaDialog(props) {
 }
 
 export default RespuestaDialog;
+

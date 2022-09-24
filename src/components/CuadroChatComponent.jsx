@@ -36,6 +36,7 @@ function CuadroChat() {
       <CardContent>
         <div className="App">
           <FeedMensajes largo={largo}></FeedMensajes>
+
         </div>
       </CardContent>
 
@@ -48,8 +49,10 @@ function CuadroChat() {
           open={open}
         ></RespuestaDialog>
       </div>
+
     </Container>
   );
 }
 
 export default CuadroChat;
+

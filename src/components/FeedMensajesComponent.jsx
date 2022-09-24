@@ -6,6 +6,7 @@ import { getMensajes } from "../service/mensajesService";
 import Mensaje from "./MensajeComponent";
 
 function FeedMensajes(props) {
+
   const [mensajesData, setMensajesData] = useState([]);
 
   useEffect(() => {
@@ -14,16 +15,20 @@ function FeedMensajes(props) {
 
   return (
     <>
+
       {mensajesData.map((datosMensaje) => {
+
         return (
           <List
             sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
           >
+
             <Mensaje
               texto={datosMensaje.texto}
               autor={datosMensaje.autor}
               fecha={datosMensaje.fecha}
             ></Mensaje>
+
 
             <Divider variant="inset" component="li" />
           </List>
@@ -33,4 +38,6 @@ function FeedMensajes(props) {
   );
 }
 
+
 export default FeedMensajes;
+
