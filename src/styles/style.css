@@ -3,11 +3,17 @@
     width: 95%;
     height:580px;
     overflow-x: auto;
+    scroll-behavior:inherit;
+    box-shadow: 31px 33px 31px 0px rgb(0 0 0 / 13%), -13px -11px 8px 0px hsl(0deg 0% 81% / 33%);
 }
 
 .container{
     width: 95%;
     height:580px;
-    overflow-x: auto;
     
 }
+span {
+    overflow-wrap: break-word;
+    width: 300px;
+    display:block;
+    }
