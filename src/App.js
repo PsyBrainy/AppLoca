@@ -2,7 +2,6 @@ import React from 'react';
 import CuadroChat from "./components/CuadroChatComponent.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -10,7 +9,6 @@ function App() {
         <Route path="/" element={<CuadroChat />} />
       </Routes>
     </BrowserRouter>
-
   );
 }
 
