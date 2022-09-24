@@ -1,6 +1,6 @@
 
 import React from 'react';
-import CuadroChatComponent from "./components/CuadroChatComponent"
+import CuadroChatComponent from "./components/CuadroChatComponent.jsx"
 
 function App() {
 
