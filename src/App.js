@@ -10,8 +10,8 @@ function App() {
         <Route path="/" element={<CuadroChat />} />
       </Routes>
     </BrowserRouter>
-  );
 
+  );
 }
 
 export default App;
