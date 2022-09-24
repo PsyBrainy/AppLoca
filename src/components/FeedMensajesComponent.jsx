@@ -8,7 +8,7 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import { getMensajes } from '../service/mensajesService';
 
-function FeedMensajesComponent(props) {
+function FeedMensajes(props) {
   const [mensajesData, setMensajesData] = useState([]);
 
   useEffect(() => {
@@ -54,4 +54,4 @@ function FeedMensajesComponent(props) {
   );
 }
 
-export default FeedMensajesComponent;
+export default FeedMensajes;

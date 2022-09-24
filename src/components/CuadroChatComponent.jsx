@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import CardContent from '@mui/material/CardContent';
 import { Container } from '@mui/system';
 import { saveMensaje } from '../service/mensajesService';
-import FeedMensajesComponent from './FeedMensajesComponent';
+import FeedMensajes from './FeedMensajesComponent';
 
 
 import '../styles/style.css';
@@ -42,7 +42,7 @@ function CuadroChat(){
       
       <CardContent>
         <div className="App">
-        <FeedMensajesComponent largo={largo} ></FeedMensajesComponent>
+        <FeedMensajes largo={largo} ></FeedMensajes>
         </div>
       </CardContent>
 
