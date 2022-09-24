@@ -16,8 +16,13 @@ import DialogTitle from '@mui/material/DialogTitle';
 import './style.css';
 =======
 import React from 'react';
+<<<<<<< HEAD
 import CuadroChatComponent from "./components/CuadroChatComponent"
 >>>>>>> 6beb7125ced4cb0daccffb8bdeb6e9aaf37543e8
+=======
+import CuadroChatComponent from "./components/CuadroChatComponent.jsx"
+
+>>>>>>> 9099b31cc9df6667b9fb178ce6a063caef196308
 
 function App() {
 
