@@ -1,0 +1,11 @@
+.App{
+    width: 95%;
+    height:580px;
+    overflow-x: auto;
+}
+
+.container{
+    width: 95%;
+    height:580px;
+    overflow-x: auto;
+}
