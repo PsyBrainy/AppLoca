@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import CardContent from "@mui/material/CardContent";
 import { Container } from "@mui/system";
-import { saveMensaje } from "../service/mensajesService";
+import { saveMensaje } from "../../service/mensajesService";
 import FeedMensajes from "./FeedMensajesComponent";
 
-import "../styles/style.css";
+import "../../styles/style.css";
 import RespuestaDialog from "./RespuestaDialogComponent";
+import { Card, CssBaseline, Typography } from "@mui/material";
 
 function CuadroChat() {
   const [largo, setLargo] = useState(0);
@@ -32,14 +33,37 @@ function CuadroChat() {
   };
 
   return (
-    <Container sx={{ width: 600, height: 500, scroll: "paper" }}>
+    <>
+    <Typography variant="h4"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 1000,
+              letterSpacing: '.3rem',
+              color: '#AD1F00',
+              textDecoration: 'none',
+
+    marginLeft: "20px",
+    marginTop: "20px"
+
+            }}>
+      Chat
+    </Typography>;
+    
+    <Container sx={{ width: 600, height: 500}}>
+      <CssBaseline />
+      <Card>
       <CardContent>
         <div className="App">
           <FeedMensajes largo={largo}></FeedMensajes>
 
         </div>
       </CardContent>
-
+      <CardContent>
       <div>
         <RespuestaDialog
           handleClickOpen={handleClickOpen}
@@ -49,8 +73,10 @@ function CuadroChat() {
           open={open}
         ></RespuestaDialog>
       </div>
-
+      </CardContent>
+      </Card>
     </Container>
+    </>
   );
 }
 
