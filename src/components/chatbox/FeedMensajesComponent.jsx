@@ -30,7 +30,7 @@ function FeedMensajes(props) {
             ></Mensaje>
 
 
-            <Divider variant="inset" component="li" />
+            <Divider variant="inset" component="li" style={{marginLeft: "5px" , marginRight: "-130px"}}/>
           </List>
         );
       })}
