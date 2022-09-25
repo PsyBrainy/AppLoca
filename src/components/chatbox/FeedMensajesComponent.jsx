@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 
-import { getMensajes } from "../service/mensajesService";
+import { getMensajes } from "../../service/mensajesService";
 import Mensaje from "./MensajeComponent";
 
 function FeedMensajes(props) {

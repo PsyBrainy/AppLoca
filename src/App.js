@@ -1,18 +1,22 @@
 
 import React from 'react';
-import CuadroChat from "./components/CuadroChatComponent.jsx"
+import CuadroChat from "./components/chatbox/CuadroChatComponent.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ThemeProvider from "./components/SignIn.jsx"
+import ThemeProvider from "./components/SignInComponent.jsx"
+import BarraNavegacion from './components/navegacion/BarraNavegacionComponent.jsx';
 
 function App() {
   return (
     <BrowserRouter>
+      <BarraNavegacion />
       <Routes>
-        <Route path="/" element={<CuadroChat />} />
+        <Route path="/" element={<ThemeProvider />} />
+        <Route path="/chat" element={<CuadroChat />} />
+        <Route path="*" element={<p>Not Found</p>}/>
       </Routes>
-      <Routes>
-        <Route path="/1" element={<ThemeProvider />} />
-      </Routes>
+      
+      
+      
     </BrowserRouter>
   );
 

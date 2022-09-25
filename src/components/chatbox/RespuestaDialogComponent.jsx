@@ -12,7 +12,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 function RespuestaDialog(props) {
   return (
     <>
-      <Button variant="outlined" onClick={props.handleClickOpen}>
+      <Button variant="contained" style={{backgroundColor: "#AD1F00"}} onClick={props.handleClickOpen}>
         Responder
       </Button>
       <Dialog open={props.open} onClose={props.handleClose}>
@@ -30,8 +30,8 @@ function RespuestaDialog(props) {
         </DialogContent>
 
         <DialogActions>
-          <Button onClick={props.handleClose}>Salir</Button>
-          <Button onClick={props.handleSubmit}>Enviar</Button>
+          <Button style={{backgroundColor: "#AD1F00"}} onClick={props.handleClose}>Salir</Button>
+          <Button style={{backgroundColor: "#AD1F00"}} onClick={props.handleSubmit}>Enviar</Button>
         </DialogActions>
       </Dialog>
     </>
