@@ -20,7 +20,7 @@ function FeedMensajes(props) {
 
         return (
           <List
-            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+            sx={{ width: "100%", maxWidth: "100%", bgcolor: "background.paper" }}
           >
 
             <Mensaje
@@ -30,7 +30,7 @@ function FeedMensajes(props) {
             ></Mensaje>
 
 
-            <Divider variant="inset" component="li" />
+            <Divider variant="inset" component="li" style={{marginLeft: "5px" , marginRight: "-130px"}}/>
           </List>
         );
       })}
