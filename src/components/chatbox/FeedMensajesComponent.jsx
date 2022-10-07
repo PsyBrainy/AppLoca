@@ -33,7 +33,7 @@ function FeedMensajes(props) {
             <Divider variant="inset" component="li" style={{marginLeft: "5px" , marginRight: "-130px"}}/>
           </List>
         );
-      })}
+      }).reverse()}
     </>
   );
 }

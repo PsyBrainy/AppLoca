@@ -5,7 +5,10 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import ListItem from "@mui/material/ListItem";
 
+
 function Mensaje(props) {
+
+
   return (
     <ListItem alignItems="flex-start">
       <ListItemAvatar>
@@ -33,5 +36,4 @@ function Mensaje(props) {
     </ListItem>
   );
 }
-
 export default Mensaje;
