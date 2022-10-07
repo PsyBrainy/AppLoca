@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;}
+.formlabel{
+  background-color: aquamarine;
+}
+
+
+.App{
+    width: 95%;
+    height:580px;
+    overflow: auto;
+display: flex;
+    flex-direction: column-reverse;
+ 
+}
+
+
+ ::-webkit-scrollbar {
+   display: none;
+      
+}
+
+
+span {
+     
+    height: auto;
+    word-wrap: break-word;
+  }
+
+  .item{
+    background-color:aqua
+  }
+
+ 

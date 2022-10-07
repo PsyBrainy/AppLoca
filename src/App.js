@@ -1,43 +1,25 @@
-import './App.css';
-import React,{ useEffect , useState } from 'react';
 
-import CardContent from '@mui/material/CardContent';
-import { Container } from '@mui/system';
-import { getMensajes } from './service/mensajesService';
-import FeedMensajesComponent from './components/FeedMensajesComponent';
-import PopMensajeComponent from './components/PopMensajeComponent';
+import React from 'react';
+import CuadroChat from "./components/chatbox/CuadroChatComponent.jsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ThemeProvider from "./components/SignInComponent.jsx"
+import BarraNavegacion from './components/navegacion/BarraNavegacionComponent.jsx';
 
 function App() {
-
-  const [mensajesData, setMensajesData] = useState([]);
-
-
-  useEffect(() => {
-    getMensajes().then(data => setMensajesData(data))
-  }, [mensajesData])
-
-
-
   return (
-
-    <Container sx={{ width: 600, height: 500, scroll: 'paper' } }>
+    <BrowserRouter>
+      <BarraNavegacion />
+      <Routes>
+        <Route path="/" element={<ThemeProvider />} />
+        <Route path="/chat" element={<CuadroChat />} />
+        <Route path="*" element={<p>Not Found</p>}/>
+      </Routes>
       
-      <CardContent>
-        <div className="App">
-          {
-            mensajesData.map(item => {
-              return(
-                <FeedMensajesComponent mensaje={item}></FeedMensajesComponent>
-              )})
-          }
-        </div>
-      </CardContent>
-
-      <PopMensajeComponent>
-      </PopMensajeComponent>
-
-    </Container>
+      
+      
+    </BrowserRouter>
   );
+
 }
 
 export default App;

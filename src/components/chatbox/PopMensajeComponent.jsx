@@ -36,7 +36,7 @@ function PopMensajeComponent(){
 
     return(
         <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button variant="contained" color="success" onClick={handleClickOpen}>
         Responder
       </Button>
       <Dialog open={open} onClose={handleClose}>
@@ -56,8 +56,8 @@ function PopMensajeComponent(){
         </DialogContent>
         
         <DialogActions>
-          <Button onClick={handleClose}>Salir</Button>
-          <Button onClick={handleSubmit}>Enviar</Button>
+          <Button color="success"  onClick={handleClose}>Salir</Button>
+          <Button color="success"  onClick={handleSubmit}>Enviar</Button>
         </DialogActions>
       </Dialog>
     </div>
