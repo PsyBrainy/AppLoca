@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import ListItem from "@mui/material/ListItem";
 
 
-
 function Mensaje(props) {
 
 
@@ -36,8 +35,5 @@ function Mensaje(props) {
       />
     </ListItem>
   );
-
 }
-
-
 export default Mensaje;

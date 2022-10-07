@@ -31,7 +31,6 @@ function CuadroChat() {
   const handleInput = (evt) => {
     setFormInput({ texto: evt.target.value, autor: "Martin" });
   };
-
  
 
   return (

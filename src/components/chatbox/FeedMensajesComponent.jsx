@@ -34,7 +34,6 @@ function FeedMensajes(props) {
           </List>
         );
       }).reverse()}
-      
     </>
   );
 }
