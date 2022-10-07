@@ -32,21 +32,26 @@ function CuadroChat() {
     setFormInput({ texto: evt.target.value, autor: "Martin" });
   };
 
+ 
+
   return (
     <>
-    <Typography variant="h4"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 1000,
-              letterSpacing: '.3rem',
-              color: '#AD1F00',
-              textDecoration: 'none',
-
+    <Typography 
+    
+    className="tipografhy"
+          variant="h4"
+          noWrap
+          component="a"
+          href="/"
+          sx={{
+            
+            display: { xs: 'none', md: 'flex' },
+            fontFamily: 'monospace',
+            fontWeight: 1000,
+            letterSpacing: '.3rem',
+            color: '#AD1F00',
+            textDecoration: 'none',
+    marginRight: 2,
     marginLeft: "20px",
     marginTop: "20px"
 
